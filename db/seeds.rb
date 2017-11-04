@@ -1,9 +1,10 @@
 User.create!(
-email: "wolfie.truong@gmail.com",
+email: "wolfgang.truong@gmail.com",
 password: "password"
 )
+
 User.create!(
-email: "wolfgang.truong@gmail.com",
+email: "wolfie.truong@gmail.com",
 password: "password"
 )
 
@@ -13,6 +14,8 @@ password: "password"
   password: "password"
   )
 end
+
+
 
 users = User.all
 
