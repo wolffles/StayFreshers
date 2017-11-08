@@ -22,7 +22,6 @@ end
  group :development, :test do
    gem 'rspec-rails'
    gem 'shoulda'
-   gem 'faker'
    gem 'factory_girl_rails'
    gem 'simplecov'
    gem 'pry-rails'
@@ -67,3 +66,5 @@ gem 'redcarpet'
 
 #allows for an imported theme. add it to
  gem 'bootswatch-rails'
+#helps create fake data
+ gem 'faker'
