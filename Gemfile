@@ -24,6 +24,10 @@ end
    gem 'pry-rails'
    gem 'vcr' #records responses onto cassette tapes
  end
+
+ group :test do
+   gem 'database_cleaner'
+ end
  # Use pg as the production database for Active Record
  gem 'pg'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
