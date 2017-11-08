@@ -11,13 +11,22 @@
   <body>
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <!-- <div class="pull-left" href="home">
+        <%= image_tag("sflogo_nav.jpg") %>
+      </div> -->
+
+      <a class="navbar-brand" href="#">StayFreshers</a>
       <div class="pull-right user-info">
         <% if user_signed_in? %>
           <%= "#{current_user.email}" %> -
           <%= link_to "Account", account_path %> - <%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
         <% else %>
-          <%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link' %> -
+        <button class="btn btn-primary">
+          <%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link' %>
+        </button>
+        <button class="btn btn-primary">
           <%= link_to "Sign In", new_user_session_path, :class => 'navbar-link' %>
+        </button>
         <% end %>
       </div>
     </nav>
@@ -29,12 +38,12 @@
           <%= flash[:notice] %>
         </div>
       <% elsif flash.now[:alert] %>
-        <div class="alert alert-danger">
+        <div class="alert alert-primary">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
           <%= flash.now[:alert] %>
         </div>
       <% elsif flash[:alert] %>
-        <div class="alert alert-warning">
+        <div class="alert alert-primary">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
           <%= flash[:alert] %>
         </div>
