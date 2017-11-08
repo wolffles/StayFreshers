@@ -6,8 +6,6 @@ git_source(:github) do |repo_name|
 end
 
 group :production do
-  # Use pg as the production database for Active Record
-  gem 'pg'
   gem 'rails_12factor'
 end
 
@@ -15,7 +13,6 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'sqlite3'
   gem 'listen', '~> 3.0.5'
 end
 
@@ -27,11 +24,12 @@ end
    gem 'pry-rails'
    gem 'vcr' #records responses onto cassette tapes
  end
+ # Use pg as the production database for Active Record
+ gem 'pg'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-# Use Puma as the app server
+
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
