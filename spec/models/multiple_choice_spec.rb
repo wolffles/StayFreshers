@@ -8,7 +8,7 @@ RSpec.describe MultipleChoice, type: :model do
 
   describe "MultipleChoice" do
    it "has question, answer and 4 choices 1 being right" do
-     expect(my_multiple).to have_attributes(question: "question", correct_answer: "righto", a: "MyText", b: "MyText", c: "MyText", d: "righto", test_set_id: my_test_set.id)
+     expect(my_multiple).to have_attributes(question: "question", correct_answer: "righto", a: "a", b: "b", c: "c", d: "righto", test_set_id: my_test_set.id)
    end
   end
 end

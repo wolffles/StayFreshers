@@ -1,18 +1,16 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/spec/models/flashcard_spec.rb": [
+      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/spec/controllers/welcome_controller_spec.rb": [
         1,
         null,
         1,
-        2,
-        2,
-        2,
-        null,
         null,
         1,
         1,
         1,
+        1,
+        null,
         null,
         null,
         null
@@ -87,11 +85,11 @@
         null,
         null,
         1,
-        1,
+        5,
         null,
         null,
         1,
-        1,
+        5,
         null,
         null
       ],
@@ -556,7 +554,7 @@
       "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/spec/factories/flashcards.rb": [
         1,
         1,
-        1,
+        null,
         1,
         1,
         null,
@@ -572,6 +570,7 @@
         1,
         1,
         null,
+        null,
         null
       ],
       "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/spec/factories/test_sets.rb": [
@@ -581,6 +580,7 @@
         1,
         1,
         null,
+        null,
         null
       ],
       "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/spec/factories/true_falses.rb": [
@@ -588,7 +588,7 @@
         1,
         1,
         1,
-        1,
+        null,
         null,
         null
       ],
@@ -596,7 +596,7 @@
         1,
         1,
         1,
-        2,
+        5,
         1,
         1,
         1,
@@ -633,9 +633,99 @@
         1,
         null
       ],
+      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/app/controllers/welcome_controller.rb": [
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/spec/models/flashcard_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/app/models/flashcard.rb": [
         1,
         1,
+        null,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/spec/models/multiple_choice_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/app/models/multiple_choice.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        5,
+        null,
+        null
+      ],
+      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/spec/models/test_set_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/app/models/test_set.rb": [
@@ -644,9 +734,34 @@
         1,
         1,
         1,
+        1,
+        null
+      ],
+      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/spec/models/true_false_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/app/models/true_false.rb": [
+        1,
+        1,
+        null,
+        1,
+        null,
         null
       ]
     },
-    "timestamp": 1510250517
+    "timestamp": 1510264400
   }
 }
