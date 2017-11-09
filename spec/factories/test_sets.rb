@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :test_set do
-    name "MyText"
-    subject "MyText"
-    creator ""
+    user_id 1
+    name "name"
+    subject "subject"
   end
 end

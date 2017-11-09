@@ -1,16 +1,18 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/spec/controllers/welcome_controller_spec.rb": [
+      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/spec/models/flashcard_spec.rb": [
         1,
         null,
         1,
+        2,
+        2,
+        2,
+        null,
         null,
         1,
         1,
         1,
-        1,
-        null,
         null,
         null,
         null
@@ -551,10 +553,53 @@
         null,
         null
       ],
-      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/spec/factories/users.rb": [
+      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/spec/factories/flashcards.rb": [
+        1,
+        1,
+        1,
         1,
         1,
         null,
+        null
+      ],
+      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/spec/factories/multiple_choices.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/spec/factories/test_sets.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/spec/factories/true_falses.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/spec/factories/users.rb": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -572,6 +617,7 @@
         null,
         1,
         null,
+        1,
         null
       ],
       "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/app/models/application_record.rb": [
@@ -587,25 +633,20 @@
         1,
         null
       ],
-      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/app/controllers/welcome_controller.rb": [
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/app/controllers/application_controller.rb": [
+      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/app/models/flashcard.rb": [
         1,
         1,
         null
       ],
-      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/spec/models/user_spec.rb": [
+      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/app/models/test_set.rb": [
         1,
-        null,
+        1,
+        1,
         1,
         1,
         null
       ]
     },
-    "timestamp": 1510164971
+    "timestamp": 1510250517
   }
 }

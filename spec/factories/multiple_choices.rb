@@ -1,10 +1,10 @@
 FactoryGirl.define do
   factory :multiple_choice do
-    question "MyText"
-    correct_answer "MyText"
+    question "question"
+    correct_answer "righto"
     a "MyText"
     b "MyText"
     c "MyText"
-    d "MyText"
+    d "righto"
   end
 end
