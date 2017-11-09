@@ -10,10 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171007205511) do
+ActiveRecord::Schema.define(version: 20171109011611) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "flashcards", force: :cascade do |t|
+    t.text "question"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "test_set_id"
+    t.index ["test_set_id"], name: "index_flashcards_on_test_set_id"
+  end
+
+  create_table "multiple_choices", force: :cascade do |t|
+    t.text "question"
+    t.text "correct_answer"
+    t.text "a"
+    t.text "b"
+    t.text "c"
+    t.text "d"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "test_set_id"
+    t.index ["test_set_id"], name: "index_multiple_choices_on_test_set_id"
+  end
+
+  create_table "test_sets", force: :cascade do |t|
+    t.text "name"
+    t.text "subject"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_test_sets_on_user_id"
+  end
+
+  create_table "true_falses", force: :cascade do |t|
+    t.text "question"
+    t.boolean "correct_answer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "test_set_id"
+    t.index ["test_set_id"], name: "index_true_falses_on_test_set_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
