@@ -1,17 +1,10 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/spec/controllers/welcome_controller_spec.rb": [
+      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/spec/controllers/user/user_controller_spec.rb": [
         1,
         null,
         1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
         null,
         null
       ],
@@ -606,6 +599,8 @@
       "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/config/routes.rb": [
         1,
         1,
+        null,
+        1,
         1,
         null,
         1,
@@ -642,6 +637,21 @@
       "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/app/controllers/application_controller.rb": [
         1,
         1,
+        null,
+        null
+      ],
+      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/spec/controllers/welcome_controller_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/spec/models/flashcard_spec.rb": [
@@ -762,6 +772,6 @@
         null
       ]
     },
-    "timestamp": 1510264400
+    "timestamp": 1510434755
   }
 }
