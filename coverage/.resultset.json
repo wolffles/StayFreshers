@@ -5,6 +5,16 @@
         1,
         null,
         1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
         null,
         null
       ],
@@ -78,11 +88,11 @@
         null,
         null,
         1,
-        5,
+        6,
         null,
         null,
         1,
-        5,
+        6,
         null,
         null
       ],
@@ -589,7 +599,7 @@
         1,
         1,
         1,
-        5,
+        6,
         1,
         1,
         1,
@@ -628,9 +638,15 @@
         1,
         null
       ],
-      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/app/controllers/welcome_controller.rb": [
+      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/app/controllers/user_controller.rb": [
         1,
         1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        0,
         null,
         null
       ],
@@ -651,6 +667,12 @@
         1,
         null,
         null,
+        null,
+        null
+      ],
+      "/Users/wolfgang/Desktop/wolfstudy/bloc/StayFreshers/app/controllers/welcome_controller.rb": [
+        1,
+        1,
         null,
         null
       ],
@@ -772,6 +794,6 @@
         null
       ]
     },
-    "timestamp": 1510434755
+    "timestamp": 1510504863
   }
 }
