@@ -22,7 +22,10 @@ end
    gem 'factory_girl_rails'
    gem 'simplecov'
    gem 'pry-rails'
+   #allows for view render testing.
+   gem 'rails-controller-testing'
    gem 'vcr' #records responses onto cassette tapes
+
  end
 
  group :test do
