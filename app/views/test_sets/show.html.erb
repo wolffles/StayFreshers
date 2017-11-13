@@ -1,0 +1,8 @@
+<h1><%= @test_set.name.capitalize %> </h1>
+<h5><%= @test_set.subject ||= "Subject N/A" %></h5>
+<small><%= render @test_set.flashcards %></small>
+<small><%= render @test_set.multiple_choices %></small>
+<small><%= render @test_set.true_falses %></small>
+
+ <!-- have collapsible windows that show the count of questions you have, and when you click on them it expands and shows you the names of the cards -->
+ <!-- add additional cards to the set when you press the button the form shows up in a window -->

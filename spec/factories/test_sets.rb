@@ -3,6 +3,5 @@ FactoryGirl.define do
     user_id 1
     name "name"
     subject "subject"
-    
   end
 end
