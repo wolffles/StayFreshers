@@ -8,18 +8,7 @@ RSpec.describe TestSetsController, type: :controller do
       sign_in @my_user
       @my_test_set = FactoryGirl.create(:test_set, user: @my_user)
     end
-    # describe "GET #index" do
-    #   it "returns http success" do
-    #     get :index
-    #     expect(response).to have_http_status(:success)
-    #   end
-    #
-    #   it "renders index view" do
-    #     get :index
-    #     expect(response).to render_template :index
-    #   end
-    # end
-
+  
     describe "GET #new" do
       it "returns http success" do
         get :new

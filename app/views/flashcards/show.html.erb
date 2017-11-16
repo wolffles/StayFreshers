@@ -1,0 +1,4 @@
+<h1><%= @flashcard.question.capitalize %> </h1>
+<h5><%= @flashcard.description%> </h5>
+<%= link_to "Edit", edit_test_set_flashcard_path %>
+<!-- the variable @testset is out of scope so we use @flashcard.test_set here -->
