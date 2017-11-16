@@ -2,7 +2,7 @@ class FlashcardsController < ApplicationController
 
   def new
     @test_set = TestSet.find(params[:test_set_id])
-    @flashcard = Flashcard.new
+    @flashcard = @test_set.flashcards.build
   end
 
   def create
