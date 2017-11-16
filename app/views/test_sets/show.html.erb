@@ -1,7 +1,12 @@
 <h1><%= @test_set.name.capitalize %> </h1>
 <h5><%= @test_set.subject ||= "Subject N/A" %></h5>
+<%= link_to "Edit", edit_test_set_path(@test_set) %>
+<%= link_to "new card", new_test_set_flashcard_path(@test_set)%>
+<h5> Flashcards <h5>
 <small><%= render @test_set.flashcards %></small>
+<h5> Multiple Choices
 <small><%= render @test_set.multiple_choices %></small>
+<h5> True & falses <h5>
 <small><%= render @test_set.true_falses %></small>
 
  <!-- have collapsible windows that show the count of questions you have, and when you click on them it expands and shows you the names of the cards -->
