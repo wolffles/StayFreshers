@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :test_sets, except: [:index] do
     resources :flashcards, except: [:index]
     resources :true_falses, except: [:index]
+    resources :multiple_choices, except: [:index]
   end
   get 'account' => 'user#index'
 

@@ -4,9 +4,9 @@
 <h5> Flashcards <%= link_to "New", new_test_set_flashcard_path(@test_set)%> <h5>
 
 <small><%= render @test_set.flashcards %></small>
-<h5> Multiple Choices
+<h5> Multiple Choices  <%= link_to "New", new_test_set_multiple_choice_path(@test_set)%> </h5>
 <small><%= render @test_set.multiple_choices %></small>
-<h5> True & falses <%= link_to "New", new_test_set_true_false_path(@test_set)%> <h5><h5>
+<h5> True & falses <%= link_to "New", new_test_set_true_false_path(@test_set)%> </h5>
 <small><%= render @test_set.true_falses %></small>
 
  <!-- have collapsible windows that show the count of questions you have, and when you click on them it expands and shows you the names of the cards -->
