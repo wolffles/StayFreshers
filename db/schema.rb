@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171109011611) do
+ActiveRecord::Schema.define(version: 20171117200751) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,15 @@ ActiveRecord::Schema.define(version: 20171109011611) do
     t.datetime "updated_at", null: false
     t.integer "test_set_id"
     t.index ["test_set_id"], name: "index_multiple_choices_on_test_set_id"
+  end
+
+  create_table "notes", force: :cascade do |t|
+    t.text "subject"
+    t.text "body"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_notes_on_user_id"
   end
 
   create_table "test_sets", force: :cascade do |t|
