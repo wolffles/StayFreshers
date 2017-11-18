@@ -64,9 +64,9 @@ RSpec.describe MultipleChoicesController, type: :controller do
         new_question = Faker::Hacker.noun
         new_correct_answer = Faker::Hacker.verb
         new_a = new_correct_answer
-        new_b = Faker::Hacker.verb
-        new_c = Faker::Hacker.noun
-        new_d = Faker::Hacker.verb
+        new_b = "Faker::Hacker.verb"
+        new_c = "Faker::Hacker.noun1"
+        new_d = "Faker::Hacker.verb2"
 
         put :update, params: { test_set_id: @my_test_set.id, id: @my_multiple_choice.id,
            multiple_choice: {question: new_question,  correct_answer: new_correct_answer, a: new_a, b: new_b, c: new_c, d: new_d}}

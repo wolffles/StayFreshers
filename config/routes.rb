@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     resources :true_falses, except: [:index]
     resources :multiple_choices, except: [:index]
   end
+
+  resources :notes, except: :index
+  
   get 'account' => 'user#index'
 
   get 'welcome/index'

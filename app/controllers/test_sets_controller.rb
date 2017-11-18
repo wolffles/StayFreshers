@@ -1,9 +1,5 @@
 class TestSetsController < ApplicationController
 
-  # def index
-  #   @test_sets = current_user.test_sets
-  # end
-
   def new
     @test_set = TestSet.new
   end
@@ -13,6 +9,7 @@ class TestSetsController < ApplicationController
     @test_set.user = current_user
     if @test_set.save
       flash[:notice] = "Stay Fresher test set was saved."
+      redirect_to @test_set
     else
       flash.now[:alert] = "Ther was an error saving. Please try again"
       render :new
