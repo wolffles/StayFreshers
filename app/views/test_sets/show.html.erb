@@ -1,11 +1,15 @@
 <h1><%= @test_set.name.capitalize %> </h1>
 <h5><%= @test_set.subject ||= "Subject N/A" %></h5>
-<%= link_to "Edit", edit_test_set_path(@test_set) %>
-<h5> Flashcards <%= link_to "New", new_test_set_flashcard_path(@test_set)%> <h5>
+<%= link_to "Edit Test Set", edit_test_set_path(@test_set) %>
 
+<%= link_to "Practice flashcards", flashcards_test_test_set_path(@test_set) %>
+
+<h5> Flashcards <%= link_to "New", new_test_set_flashcard_path(@test_set)%> <h5>
 <small><%= render @test_set.flashcards %></small>
+
 <h5> Multiple Choices  <%= link_to "New", new_test_set_multiple_choice_path(@test_set)%> </h5>
 <small><%= render @test_set.multiple_choices %></small>
+
 <h5> True & falses <%= link_to "New", new_test_set_true_false_path(@test_set)%> </h5>
 <small><%= render @test_set.true_falses %></small>
 

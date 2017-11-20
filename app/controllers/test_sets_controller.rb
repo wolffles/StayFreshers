@@ -46,6 +46,13 @@ class TestSetsController < ApplicationController
     end
   end
 
+  def flashcards_test
+    @test_set = TestSet.find(params[:id])
+    @flashcards_array = @test_set.flashcards
+    @number_of_cards = params[:number_of_cards]
+    @flashcards_array = @flashcards_array.sample(@number_ofcards)
+  end
+
   private
 
   def test_set_params

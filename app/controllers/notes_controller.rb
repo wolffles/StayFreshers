@@ -1,4 +1,7 @@
 class NotesController < ApplicationController
+  def index
+    @notes = Note.all
+  end
 
   def new
     @note = Note.new
@@ -11,7 +14,7 @@ class NotesController < ApplicationController
       flash[:notice] = "Your notes have been saved."
       redirect_to @note
     else
-      flash.now[:alert] = "Ther was an error saving. Please try again"
+      flash.now[:alert] = "There was an error saving. Please try again"
       render :new
     end
   end
