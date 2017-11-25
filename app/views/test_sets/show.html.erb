@@ -1,16 +1,36 @@
 <h1><%= @test_set.name.capitalize %> </h1>
 <h5><%= @test_set.subject ||= "Subject N/A" %></h5>
-<%= link_to "Edit Test Set", edit_test_set_path(@test_set) %>
+<!-- <%= form_for :multibutton do |f| %>
+  <%= select_tag(:number_of_cards, options_for_select(1..20, 2)) %>
+  <%= button_to "flashcard", { action: "flashcards_test", params: {number_of_cards: "number_of_cards"}}, :method => :get %>
+  <%= button_to "true & false", { action: "true_falses_test", params: {number_of_cards: "number_of_cards"}}, :method => :get %>
+  <%= button_to "multiple_choices", { action: "multiple_choices_test", params: {number_of_cards: "number_of_cards"}}, :method => :get %>
+<% end %> -->
 
-<%= link_to "Practice flashcards", flashcards_test_test_set_path(@test_set) %>
 
-<h5> Flashcards <%= link_to "New", new_test_set_flashcard_path(@test_set)%> <h5>
+
+<h5> Flashcards
+  <%= form_tag flashcards_test_test_set_path, :method => :get do |f| %>
+    <%= select_tag(:number_of_cards, options_for_select(1..20, 2)) %>
+    <%= submit_tag("go")%>
+  <% end %>
+  <%= link_to "New", new_test_set_flashcard_path(@test_set)%> <h5>
 <small><%= render @test_set.flashcards %></small>
 
-<h5> Multiple Choices  <%= link_to "New", new_test_set_multiple_choice_path(@test_set)%> </h5>
+<h5> Multiple Choices
+  <%= form_tag multiple_choices_test_test_set_path, :method => :get do |f| %>
+    <%= select_tag(:number_of_cards, options_for_select(1..20, 2)) %>
+    <%= submit_tag("go")%>
+  <% end %>
+  <%= link_to "New", new_test_set_multiple_choice_path(@test_set)%> </h5>
 <small><%= render @test_set.multiple_choices %></small>
 
-<h5> True & falses <%= link_to "New", new_test_set_true_false_path(@test_set)%> </h5>
+<h5> True & falses
+  <%= form_tag true_falses_test_test_set_path, :method => :get do |f| %>
+    <%= select_tag(:number_of_cards, options_for_select(1..20, 2)) %>
+    <%= submit_tag("go")%>
+  <% end %>
+  <%= link_to "New", new_test_set_true_false_path(@test_set)%> </h5>
 <small><%= render @test_set.true_falses %></small>
 
  <!-- have collapsible windows that show the count of questions you have, and when you click on them it expands and shows you the names of the cards -->

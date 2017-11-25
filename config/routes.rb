@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :test_sets, except: [:index] do
     member do
       get 'flashcards_test'
+      get 'true_falses_test'
+      get 'multiple_choices_test'
     end
     resources :flashcards, except: [:index]
     resources :true_falses, except: [:index]
