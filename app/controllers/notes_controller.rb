@@ -1,4 +1,7 @@
 class NotesController < ApplicationController
+  def index
+    @notes = Note.all
+  end
 
   def new
     @note = Note.new
@@ -7,13 +10,17 @@ class NotesController < ApplicationController
   def create
     @note = Note.new(note_params)
     @note.user = current_user
-    if @note.save
+    if params[:preview] || !@note.save
+      redirect_to account_path
+      # render :action => 'new'
+    elsif @note.save
       flash[:notice] = "Your notes have been saved."
       redirect_to @note
     else
-      flash.now[:alert] = "Ther was an error saving. Please try again"
+      flash.now[:alert] = "There was an error saving. Please try again"
       render :new
     end
+
   end
 
   def show
@@ -46,9 +53,11 @@ class NotesController < ApplicationController
     end
   end
 
+
+
   private
 
   def note_params
-    params.require(:note).permit(:subject, :body)
+    params.require(:note).permit(:subject, :body, :btn_name)
   end
 end

@@ -73,3 +73,7 @@ gem 'redcarpet'
  gem 'bootswatch-rails'
 #helps create fake data
  gem 'faker'
+#builds ontop of the elastic search library aiming to simplify intergration of ruby classes.
+ gem 'elasticsearch-model'
+#companion to the -models library providing features that is suitible for ruby on rails applications.
+ gem 'elasticsearch-rails'

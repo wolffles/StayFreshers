@@ -46,6 +46,13 @@ class TestSetsController < ApplicationController
     end
   end
 
+  def ts_array
+    @test_set = TestSet.find(params[:id])
+    @ts_array = @test_set.multiple_choices.sample(params[:number_of_multiple_choices].to_i)
+    @ts_array += @test_set.true_falses.sample(params[:number_of_true_falses].to_i)
+    @ts_array +=  @test_set.flashcards.sample(params[:number_of_flashcards].to_i)
+  end
+
   private
 
   def test_set_params

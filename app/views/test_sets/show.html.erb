@@ -1,13 +1,27 @@
 <h1><%= @test_set.name.capitalize %> </h1>
 <h5><%= @test_set.subject ||= "Subject N/A" %></h5>
-<%= link_to "Edit", edit_test_set_path(@test_set) %>
-<h5> Flashcards <%= link_to "New", new_test_set_flashcard_path(@test_set)%> <h5>
 
+
+
+<h5> Flashcards
+  <%= form_for :ts_array, :url => ts_array_test_set_path, method: :get do |f| %>
+  <!-- :ts_array is an object to be created not referencing anything -->
+    <%= select_tag(:number_of_flashcards, options_for_select(0..@test_set.flashcards.size, 0)) %>
+  <%= link_to "New", new_test_set_flashcard_path(@test_set)%> <h5>
 <small><%= render @test_set.flashcards %></small>
-<h5> Multiple Choices  <%= link_to "New", new_test_set_multiple_choice_path(@test_set)%> </h5>
+
+<h5> Multiple Choices
+    <%= select_tag(:number_of_multiple_choices, options_for_select(0..@test_set.multiple_choices.size, 0)) %>
+  <%= link_to "New", new_test_set_multiple_choice_path(@test_set)%> </h5>
 <small><%= render @test_set.multiple_choices %></small>
-<h5> True & falses <%= link_to "New", new_test_set_true_false_path(@test_set)%> </h5>
+
+<h5> True & falses
+
+    <%= select_tag(:number_of_true_falses, options_for_select(0..@test_set.true_falses.size, 0)) %>
+  <%= link_to "New", new_test_set_true_false_path(@test_set)%> </h5>
 <small><%= render @test_set.true_falses %></small>
+<%= f.submit "go", class: 'btn btn-success' %>
+<% end%>
 
  <!-- have collapsible windows that show the count of questions you have, and when you click on them it expands and shows you the names of the cards -->
  <!-- add additional cards to the set when you press the button the form shows up in a window -->

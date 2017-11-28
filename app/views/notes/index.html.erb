@@ -1,0 +1,12 @@
+<ul>
+  <% @notes.each do |note| %>
+    <li>
+      <h3>
+        <%= note.title %>
+      </h3>
+      <p>
+        <%= note.text %>
+      </p>
+    </li>
+  <% end -%>
+</ul>
