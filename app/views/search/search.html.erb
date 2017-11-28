@@ -3,7 +3,7 @@
 <%= form_for search_path, method: :get do |f| %>
   <p>
     <%= f.label "Search for" %>
-    <%= text_field_tag :q, params[:q] %>
+    <%= text_field_tag :subject, params[:subject] %>
     <%= submit_tag "Go", name: nil %>
   </p>
 <% end %>
@@ -12,7 +12,7 @@
   <% @notes.each do |note| %>
     <li>
       <h3>
-        <%= link_to note.title, controller: "notes", action: "show", id: note._id%>
+        <%= link_to note.subject, controller: "notes", action: "show", id: note._id%>
       </h3>
     </li>
   <% end %>
