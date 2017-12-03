@@ -1,1 +1,8 @@
-ts multiple choice
+<div class="media">
+  <div class="media-body">
+    <h5 class="media-heading">
+      <%= link_to multiple_choice.question, test_set_multiple_choice_path(@test_set, multiple_choice) %>
+      <small> <%= multiple_choice.correct_answer %> </small>
+    </h5>
+  </div>
+</div>

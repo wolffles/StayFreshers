@@ -9,4 +9,4 @@ class Note < ApplicationRecord
 
 end
 
-Note.import
+# Note.import

@@ -51,6 +51,16 @@ class TestSetsController < ApplicationController
     @ts_array = @test_set.multiple_choices.sample(params[:number_of_multiple_choices].to_i)
     @ts_array += @test_set.true_falses.sample(params[:number_of_true_falses].to_i)
     @ts_array +=  @test_set.flashcards.sample(params[:number_of_flashcards].to_i)
+    @array_answers = @ts_array.map{|ele|
+      if ele.class == Flashcard
+        1
+      elsif ele.class = MultipleChoice
+        ele.correct_answer
+      elsif ele.class = TrueFalse
+        ele.correct_answer
+      end
+    }
+    @user_answers = Array.new(@array_answers.size, :user_answer)
   end
 
   private
