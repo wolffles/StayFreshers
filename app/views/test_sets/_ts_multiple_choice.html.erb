@@ -1,8 +1,13 @@
 <div class="media">
-  <div class="media-body">
+  <div class="media-body" style="text-align:center">
     <h5 class="media-heading">
       <%= link_to multiple_choice.question, test_set_multiple_choice_path(@test_set, multiple_choice) %>
       <small> <%= multiple_choice.correct_answer %> </small>
+      <%= form_for :grading do |f| %>
+        <div class="form-group">
+          <%= f.select :user_answer, [[multiple_choice.a, 1],[multiple_choice.b, 2],[multiple_choice.c, 3],[multiple_choice.d, 4]], class: "form-control"%>
+        </div>
+      <% end %>
     </h5>
   </div>
 </div>

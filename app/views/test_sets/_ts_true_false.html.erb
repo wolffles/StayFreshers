@@ -1,8 +1,17 @@
 <div class="media">
-  <div class="media-body">
+  <div class="media-body" style="text-align:center">
     <h5 class="media-heading">
       <%= link_to true_false.question, test_set_true_false_path(@test_set, true_false) %>
       <small> <%= true_false.correct_answer%> </small>
+
+      <%= form_for :doesntmatter do |f| %>
+        <div class="form-group">
+          <%= f.label :correct_answer, class: 'checkbox' do %>
+            <%= f.check_box :correct_answer %> True or False
+          <% end %>
+        </div>
+      <% end %>
     </h5>
   </div>
 </div>
+<br>

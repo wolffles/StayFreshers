@@ -1,15 +1,15 @@
 <div class="media">
-  <div class="media-body">
+  <div class="media-body" style="text-align:center">
     <h5 class="media-heading">
       <%= link_to flashcard.question, test_set_flashcard_path(@test_set, flashcard) %>
       <small> <%= flashcard.description %> </small>
-      <!-- <%= form_for :doesntmatter do |f| %>
+      <%= form_for :doesntmatter do |f| %>
         <div class="form-group">
-          <%= f.label :user_answer, class: 'ch' do %>
-          <%= f.text_field :user_answer, class: 'form-control', placeholder: "Enter test_set name" %>
+          <%= f.label :user_answer, class: 'form-control' do %>
+          <%= f.text_field :user_answer, class: 'form-control', placeholder: "your answer here" %>
         <% end %>
-      <% end %> -->
-      <!-- </div> -->
+      <% end %>
+      </div>
     </h5>
   </div>
 </div>

@@ -54,18 +54,26 @@ class TestSetsController < ApplicationController
     @array_answers = @ts_array.map{|ele|
       if ele.class == Flashcard
         1
-      elsif ele.class = MultipleChoice
+      elsif ele.class == MultipleChoice
         ele.correct_answer
-      elsif ele.class = TrueFalse
+      elsif ele.class == TrueFalse
         ele.correct_answer
       end
     }
-    @user_answers = Array.new(@array_answers.size, :user_answer)
+    @user_answers = Array.new(@array_answers.size, params[:user_answer])
   end
 
+  def grading
+    @test_set = TestSet.find(params[:id])
+    @ts_array 
+    respond_to do |format|
+      format.js {render layout: false}
+    end
+  end
   private
 
   def test_set_params
     params.require(:test_set).permit(:name, :subject)
   end
+
 end
