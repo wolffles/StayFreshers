@@ -55,25 +55,32 @@ class TestSetsController < ApplicationController
       if ele.class == Flashcard
         1
       elsif ele.class == MultipleChoice
-        ele.correct_answer
+        correct_number(ele)
       elsif ele.class == TrueFalse
         ele.correct_answer
       end
     }
-    @user_answers = Array.new(@array_answers.size, params[:user_answer])
+    @user_answers = Array.new(@ts_array.size, 1)
   end
 
   def grading
     @test_set = TestSet.find(params[:id])
-    @ts_array 
-    respond_to do |format|
-      format.js {render layout: false}
-    end
+    @array_answers = params[:array_answers].split(' ')
+    @user_answers = params[:user_answers].split(' ')
+    @score = (@array_answers.zip(@user_answers).map{ |x,y|
+      x == y ? 1 : 0}).inject(:+)
+
+
   end
   private
 
   def test_set_params
     params.require(:test_set).permit(:name, :subject)
+  end
+
+  def correct_number(mc_question)
+    array = [mc_question.a, mc_question.b, mc_question.c, mc_question.d]
+    array.find_index{|x| x == mc_question.correct_answer} + 1
   end
 
 end

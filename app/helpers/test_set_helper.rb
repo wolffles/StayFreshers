@@ -45,17 +45,17 @@ private
        if ts_object.class == Flashcard
         safe_join([
           content_tag(:div, "#{index} / #{ts_array.size}", class: "numbertext"),
-          (render :partial => "ts_flashcard", locals: {flashcard: ts_object})
+          (render :partial => "ts_flashcard", locals: {flashcard: ts_object, index: index})
         ])
       elsif ts_object.class == MultipleChoice
         safe_join([
           content_tag(:div, "#{index} / #{ts_array.size}", class: "numbertext"),
-          (render :partial => "ts_multiple_choice", locals: {multiple_choice: ts_object})
+          (render :partial => "ts_multiple_choice", locals: {multiple_choice: ts_object,index: index})
         ])
       elsif ts_object.class ==  TrueFalse
         safe_join([
           content_tag(:div, "#{index} / #{ts_array.size}", class: "numbertext"),
-          (render :partial => "ts_true_false", locals: {true_false: ts_object})
+          (render :partial => "ts_true_false", locals: {true_false: ts_object,index: index})
         ])
       end
     end

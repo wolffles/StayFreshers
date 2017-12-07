@@ -1,8 +1,11 @@
 <div class="media">
   <div class="media-body" style="text-align:center">
     <h2>Finished. Submit for grading or double check?</h2>
+
+
       <div id="finalscore">
-        <%= link_to 'grading', grading_test_set_path, remote: true %>
+        <%= @ts_array.size%>
+        <%= button_to "grading", class:'btn btn-success' %>
       </div>
   </div>
 </div>

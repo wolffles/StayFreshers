@@ -3,11 +3,9 @@
     <h5 class="media-heading">
       <%= link_to flashcard.question, test_set_flashcard_path(@test_set, flashcard) %>
       <small> <%= flashcard.description %> </small>
-      <%= form_for :doesntmatter do |f| %>
+      <%= form_tag grading_test_set_path do |f| %>
         <div class="form-group">
-          <%= f.label :user_answer, class: 'form-control' do %>
-          <%= f.text_field :user_answer, class: 'form-control', placeholder: "your answer here" %>
-        <% end %>
+          <%= f.text_field "user_answer" + index.to_s, class: 'form-control', placeholder: "your answer here" %>
       <% end %>
       </div>
     </h5>
