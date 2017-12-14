@@ -1,1 +1,10 @@
-ts multiple choice
+<div class="media">
+  <div class="media-body" style="text-align:center">
+    <h2> <%=  multiple_choice.question %> </h2>
+    <h5 class="media-heading">
+        <div class="form-group">
+          <%= select_tag(("user_answer#{index.to_s}"), options_for_select([[multiple_choice.a, 1],[multiple_choice.b, 2],[multiple_choice.c, 3],[multiple_choice.d, 4]],1)) %>
+        </div>
+    </h5>
+  </div>
+</div>

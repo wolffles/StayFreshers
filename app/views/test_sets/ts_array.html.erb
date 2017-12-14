@@ -2,3 +2,12 @@ Test Set array
 
 total cards chosen
 <%= @ts_array.size %>
+
+<%= [1,2,3,4,5].sample(1) %>
+ <!-- form_tag(controller: 'test_sets' , action: 'grading') do -->
+  <%= form_for :grading, :url => grading_test_set_path, method: :get do |f| %>
+  <%= hidden_field_tag(:test_set, @test_set) %>
+  <%= hidden_field_tag(:array_answers, @array_answers) %>
+  <%= hidden_field_tag(:user_answers, @user_answers) %>
+  <%= slideshow_for(@ts_array) %>
+<%end%>

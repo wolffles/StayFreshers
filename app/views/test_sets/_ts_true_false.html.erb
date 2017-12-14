@@ -1,1 +1,11 @@
-ts true false
+<div class="media">
+  <div class="media-body" style="text-align:center">
+    <h2> <%= true_false.question %> </h2>
+    <h5 class="media-heading">
+        <div class="form-group">
+            <%= check_box_tag("user_answer#{index.to_s}") %>
+        </div>
+          <small> unchecked = false </small>
+    </h5>
+  </div>
+</div>

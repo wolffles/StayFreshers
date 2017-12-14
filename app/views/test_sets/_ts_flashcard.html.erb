@@ -1,1 +1,11 @@
-ts flashcard
+<div class="media">
+  <div class="media-body" style="text-align:center">
+    <h2> <%= flashcard.question %> </h2>
+    <h5 class="media-heading">
+        <div class="form-group">
+          <%= check_box_tag("user_answer#{index.to_s}")  %>
+        </div>
+          <small> self graded check the box if you know the answer! </small>
+    </h5>
+  </div>
+</div>

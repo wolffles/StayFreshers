@@ -1,0 +1,1 @@
+$("#finalscore").html("<%= escape_javascript( render partial: 'test_sets/grading', locals: { test_set: @test_set, array_answers: @array_answers, user_answers: @user_answers }) %>");
