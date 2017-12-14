@@ -1,13 +1,11 @@
 <div class="media">
   <div class="media-body" style="text-align:center">
+    <h2> <%= flashcard.question %> </h2>
     <h5 class="media-heading">
-      <%= link_to flashcard.question, test_set_flashcard_path(@test_set, flashcard) %>
-      <small> <%= flashcard.description %> </small>
-      <%= form_tag grading_test_set_path do |f| %>
         <div class="form-group">
-          <%= f.text_field "user_answer" + index.to_s, class: 'form-control', placeholder: "your answer here" %>
-      <% end %>
-      </div>
+          <%= check_box_tag("user_answer#{index.to_s}")  %>
+        </div>
+          <small> self graded check the box if you know the answer! </small>
     </h5>
   </div>
 </div>

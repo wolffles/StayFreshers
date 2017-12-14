@@ -57,20 +57,19 @@ class TestSetsController < ApplicationController
       elsif ele.class == MultipleChoice
         correct_number(ele)
       elsif ele.class == TrueFalse
-        ele.correct_answer
+        ele.correct_answer == true ? 1 : 0
       end
     }
-    @user_answers = Array.new(@ts_array.size, 1)
+    @user_answers = Array.new(@ts_array.size, 0)
   end
 
   def grading
     @test_set = TestSet.find(params[:id])
     @array_answers = params[:array_answers].split(' ')
     @user_answers = params[:user_answers].split(' ')
+    @user_answers = @user_answers.map.with_index{|x,y| params[("user_answer#{y.to_s}")] == nil ? "0" : params[("user_answer#{y.to_s}")] }
     @score = (@array_answers.zip(@user_answers).map{ |x,y|
       x == y ? 1 : 0}).inject(:+)
-
-
   end
   private
 

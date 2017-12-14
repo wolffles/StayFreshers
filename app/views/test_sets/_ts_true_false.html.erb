@@ -1,17 +1,11 @@
 <div class="media">
   <div class="media-body" style="text-align:center">
+    <h2> <%= true_false.question %> </h2>
     <h5 class="media-heading">
-      <%= link_to true_false.question, test_set_true_false_path(@test_set, true_false) %>
-      <small> <%= true_false.correct_answer%> </small>
-
-      <%= form_for :doesntmatter do |f| %>
         <div class="form-group">
-          <%= f.label :correct_answer, class: 'checkbox' do %>
-            <%= f.check_box :correct_answer %> True or False
-          <% end %>
+            <%= check_box_tag("user_answer#{index.to_s}") %>
         </div>
-      <% end %>
+          <small> unchecked = false </small>
     </h5>
   </div>
 </div>
-<br>
