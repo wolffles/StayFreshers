@@ -6,25 +6,31 @@ git_source(:github) do |repo_name|
 end
 
 group :production do
+  #This gem enables serving assets in production and setting your logger to standard out, both of which are required to run a Rails 4 application on a twelve-factor provider. The gem also makes the appropriate changes for Rails 3 apps.
   gem 'rails_12factor'
 end
 
 
 group :development do
+  #Better Errors replaces the standard Rails error page with a much better and more useful error page. It is also usable outside of Rails in any Rack app as Rack middleware.
   gem 'better_errors'
+  # Using binding_of_caller we can grab bindings from higher up the call stack and evaluate code in that context. Allows access to bindings arbitrarily far up the call stack, not limited to just the immediate caller.
   gem 'binding_of_caller'
+  # The Listen gem listens to file modifications and notifies you about the changes. Works everywhere!
   gem 'listen', '~> 3.0.5'
 end
 
  group :development, :test do
    gem 'rspec-rails'
    gem 'shoulda'
-   gem 'factory_girl_rails'
+   gem 'factory_bot_rails'
+   #tells you what line you've covered in rails
    gem 'simplecov'
    gem 'pry-rails'
    #allows for view render testing.
    gem 'rails-controller-testing'
-   gem 'vcr' #records responses onto cassette tapes
+   #records responses onto cassette tapes
+   gem 'vcr'
 
  end
 
