@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :true_false do
     question "question"
     correct_answer false

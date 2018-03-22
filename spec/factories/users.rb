@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   pw = "password"
   factory :user, aliases: [:author, :commenter] do
     sequence(:email){|n| "wolfgang.truong#{n}@factory.com" }

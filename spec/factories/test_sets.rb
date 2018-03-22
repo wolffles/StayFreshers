@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :test_set do
     user_id 1
     name "name"

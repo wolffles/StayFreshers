@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :multiple_choice do
     question "question"
     correct_answer "righto"
